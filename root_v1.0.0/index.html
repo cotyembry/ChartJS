@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>svg legend</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/svgBarGraph.css">
+</head>
+<body>
+	<div id="Graph1" style="width: 800px;"></div>
+	<div id="Graph2" style="width: 800px;"></div>
+	<div id="Graph3" style="width: 800px;"></div>
+	
+	<!-- <canvas style="width: 800px;" id="Graph1"></canvas> -->
+
+	<script type="text/javascript">
+		window.getGraphDataHelper = function() {
+			return (
+				{
+					department:[],
+					checkInToTriage:[],
+					checkInToCheckOut:[],
+					currentCheckIns:["12 mins"]
+				}
+				// {
+				// 	department:["EMERGENCY MEDICINE","URGENT CARE"],
+				// 	checkInToTriage:["9 mins","13 mins"],
+				// 	checkInToCheckOut:["1 hr 42 mins","1 hr 35 mins"],
+				// 	currentCheckIns:["12 mins"]
+				// } 	
+			)
+		}
+	</script>
+
+	<script type="text/javascript" src="./dist/bundle.js"></script>
+	
+</body>
+</html>
