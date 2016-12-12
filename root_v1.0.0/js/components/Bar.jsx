@@ -181,7 +181,7 @@ export default class Bar extends React.Component {
 				{
 					label: 'Check In To Check Out',
 					// data: checkInToTriageArray.concat(checkInToCheckOutArray).concat(parseFloat(data.currentCheckIns))
-					data: [checkInToCheckOutArray[0], checkInToCheckOutArray[1], 0],
+					data: [checkInToCheckOutArray[0], checkInToCheckOutArray[1], 0],	//note the last element in the array (0) says dont put a bar in this section
 					fill: true,
 		            backgroundColor: "rgba(252, 182, 23, 0.2)"
 		            // borderColor: "#FCB617",
@@ -189,7 +189,7 @@ export default class Bar extends React.Component {
 				},
 				{
 					label: 'Check In To Triage',
-					data: [checkInToTriageArray[0], checkInToTriageArray[1], 0],
+					data: [checkInToTriageArray[0], checkInToTriageArray[1], 0],		//same as aboves note comment
 					fill: true,
 		            backgroundColor: "rgba(134, 152, 162, 0.2)"
 		            // borderColor: "#8698A2",
@@ -197,7 +197,7 @@ export default class Bar extends React.Component {
 				},
 				{
 					label: 'Current Check-Ins',
-					data: [0, 0, parseFloat(data.currentCheckIns)],
+					data: [0, 0, parseFloat(data.currentCheckIns)],						//this one says dont display a bar for the first two
 					fill: true,
 		            backgroundColor: "rgba(56, 198, 244, 0.2)"
 		            // borderColor: "#38C6F4",
