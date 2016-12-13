@@ -14,6 +14,12 @@ var self;
  *	so there are three categories coming from the server, but two departments and
  *	one section to simply display another data value/graph/bar
  *
+ *  the check in to check out [0] element goes to emergency medicine, and the [1]
+ *  goes to urgent care. same for check in to triage
+ *  these are values. We want these turned into minutes then graphed
+ *  then the currentCheckIns value goes to the department[2] element. Im kind of
+ *  treating it like separate key value pairs I guess
+ *
  *	the Chart.js library expects data to be in the following format:
  *
  *		data = {
