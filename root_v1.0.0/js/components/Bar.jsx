@@ -6,6 +6,42 @@ import Chart from 'chart.js';
 
 var self;
 
+
+
+/**
+ *  TASK
+ *
+ *	so there are three categories coming from the server, but two departments and
+ *	one section to simply display another data value/graph/bar
+ *
+ *	the Chart.js library expects data to be in the following format:
+ *
+ *		data = {
+ *			labels: ['labelName1', 'labelName2', ...],
+ *			datasets: [
+ *				{
+ *					label: 'lineName',
+ *					data: [CheckInToCheckOutValue, CheckInToTriageValue, CurrentCheckInsValue]
+ *				},
+ *				{
+ *					same format as the object in the datasets array above
+ *					(each object in the datasets array will represent
+ *					another section in the bar graph)
+ *				},
+ *				...
+ *			]
+ *		}
+ *
+ *
+ *	so what you need to do is convert the data from how it is coming from the server in the
+ *	json structure that comes back (after the string thats actually returned by the server)
+ *	gets evaluated i.e. rewrite the formatData method
+ *
+ */
+
+
+
+
 export default class Bar extends React.Component {
 	constructor(props) {
 		super(props);
@@ -25,7 +61,15 @@ export default class Bar extends React.Component {
 	}
 	displayChart(data, idForCanvas) {
 		var data = getGraphDataHelper();
+
+		console.log(data); //to see what it looks like
+
+
 		data = this.formatData(data);
+
+		console.log(data); //to see what it was transformed into
+
+
 		var ctx = document.getElementById(idForCanvas).getContext('2d');	
 		
 
